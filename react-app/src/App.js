@@ -14,7 +14,7 @@ class App extends Component {
         return (
             <div>
                 {/* <Title> Employees List</Title> */}
-                <table class="table table-hover">
+                <table className="table table-hover">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
