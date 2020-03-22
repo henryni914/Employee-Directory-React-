@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import employees from "./employees.json";
-import Title from "./components/Title";
+// import Title from "./components/Title";
 import EmployeeCard from "./components/EmployeeCard";
+// import Table from "./components/Table";
 
 class App extends Component {
 
@@ -12,17 +13,30 @@ class App extends Component {
     render() {
         return (
             <div>
-                <Title> Employees List</Title>
-                {this.state.employees.map(element => (
-                <EmployeeCard
-                id = {element.id}
-                key = {element.id}
-                name = {element.name}
-                department = {element.department}
-                role = {element.role}
-                email = {element.email}
-                />
-            ))}
+                {/* <Title> Employees List</Title> */}
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Department</th>
+                            <th scope="col">Role</th>
+                            <th scope="col">Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {this.state.employees.map(element => (
+                            <EmployeeCard
+                                id={element.id}
+                                key={element.id}
+                                name={element.name}
+                                department={element.department}
+                                role={element.role}
+                                email={element.email}
+                            />
+                        ))}
+                    </tbody>
+                </table>
             </div>
         );
     }
