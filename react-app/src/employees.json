@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Henry Ni",
+        "department": "Education",
+        "role": "Student",
+        "email": "henry@gmail.com"
+    },
+    {
+        "id": 2,
+        "name": "Kenny Lam",
+        "department": "Education",
+        "role": "Student",
+        "email": "kenny@gmail.com"
+    },
+    {
+        "id": 3,
+        "name": "Joe Han",
+        "department": "Education",
+        "role": "Teacher",
+        "email": "joe@gmail.com"
+    },
+    {
+        "id": 4,
+        "name": "Erin",
+        "department": "Education",
+        "role": "TA",
+        "email": "erin@gmail.com"
+    },
+    {
+        "id": 5,
+        "name": "Josh",
+        "department": "Education",
+        "role": "TA",
+        "email": "josh@gmail.com"
+    },
+    {
+        "id": 6,
+        "name": "Anthony N",
+        "department": "Education",
+        "role": "Student",
+        "email": "anthony@gmail.com"
+    }
+]
