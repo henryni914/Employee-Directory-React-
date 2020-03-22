@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import employees from "./employees.json";
-// import Title from "./components/Title";
+import Title from "./components/Title";
 import EmployeeCard from "./components/EmployeeCard";
 // import Table from "./components/Table";
 
@@ -13,7 +13,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                {/* <Title> Employees List</Title> */}
+                <Title> Employees List</Title>
                 <table className="table table-hover">
                     <thead>
                         <tr>
