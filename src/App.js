@@ -11,44 +11,15 @@ class App extends Component {
     };
 
     handleInputChange = event => {
-        // Getting the value and name of the input which triggered the change
-        // console.log(event.target);
         let searchValue = event.target.value;
-        // let searchArr = this.state.employees;
-        // if (searchValue !== "") {
-        //     console.log(searchValue);
-        //     let search = searchArr.filter(element =>
-        //         element.name.toLowerCase().includes(searchValue.toLowerCase())
-        //         //     {
-        //         //     if (element.name.toLowerCase().includes(searchValue.toLowerCase())) {
-        //         //         console.log(element)
-        //         //         searchArr.push(element)
-        //         //     }
-        //         // }
-        //     )
-            // console.log("search " + search);
-            // element.name.toLowerCase().includes(searchValue.toLowerCase())
-            // console.log(search);
-            // console.log("employeeSearch " + employeeSearch);
-            // Updating the input's state
             this.setState(
                 {
                     search: searchValue
                 });
-            // console.log(this.state.employees);
-        // } else {
-        //     this.setState(
-        //         {
-        //             employees: employees
-        //         }
-        //     )
-
-        // }
     };
 
-    
-
     render() {
+        
         const searchArr = this.state.employees.filter(element => element.name.toLowerCase().includes(this.state.search.toLowerCase()));
 
         return (

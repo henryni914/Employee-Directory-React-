@@ -40,5 +40,19 @@
         "department": "Education",
         "role": "Student",
         "email": "anthony@gmail.com"
+    },
+    {
+        "id": 7,
+        "name": "Max",
+        "department": "Education",
+        "role": "Student",
+        "email": "Max@gmail.com"
+    },
+    {
+        "id": 8,
+        "name": "Zhao",
+        "department": "Education",
+        "role": "Student",
+        "email": "zhao@gmail.com"
     }
 ]
