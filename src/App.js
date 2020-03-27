@@ -6,25 +6,26 @@ import EmployeeCard from "./components/EmployeeCard";
 class App extends Component {
 
     state = {
-        employees
+        employees,
+        search: ""
     };
 
     handleInputChange = event => {
         // Getting the value and name of the input which triggered the change
         // console.log(event.target);
         let searchValue = event.target.value;
-        let searchArr = this.state.employees;
-        if (searchValue !== "") {
-            console.log(searchValue);
-            let search = searchArr.filter(element =>
-                element.name.toLowerCase().includes(searchValue.toLowerCase())
-                //     {
-                //     if (element.name.toLowerCase().includes(searchValue.toLowerCase())) {
-                //         console.log(element)
-                //         searchArr.push(element)
-                //     }
-                // }
-            )
+        // let searchArr = this.state.employees;
+        // if (searchValue !== "") {
+        //     console.log(searchValue);
+        //     let search = searchArr.filter(element =>
+        //         element.name.toLowerCase().includes(searchValue.toLowerCase())
+        //         //     {
+        //         //     if (element.name.toLowerCase().includes(searchValue.toLowerCase())) {
+        //         //         console.log(element)
+        //         //         searchArr.push(element)
+        //         //     }
+        //         // }
+        //     )
             // console.log("search " + search);
             // element.name.toLowerCase().includes(searchValue.toLowerCase())
             // console.log(search);
@@ -32,20 +33,24 @@ class App extends Component {
             // Updating the input's state
             this.setState(
                 {
-                    employees: search
+                    search: searchValue
                 });
             // console.log(this.state.employees);
-        } else {
-            this.setState(
-                {
-                    employees: employees
-                }
-            )
+        // } else {
+        //     this.setState(
+        //         {
+        //             employees: employees
+        //         }
+        //     )
 
-        }
+        // }
     };
 
+    
+
     render() {
+        const searchArr = this.state.employees.filter(element => element.name.toLowerCase().includes(this.state.search.toLowerCase()));
+
         return (
             <div>
                 <Title> Employees List</Title>
@@ -67,7 +72,7 @@ class App extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {this.state.employees.map(element => (
+                        {searchArr.map(element => (
                             <EmployeeCard
                                 id={element.id}
                                 key={element.id}
